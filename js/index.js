@@ -16,4 +16,10 @@ headerImg.onmouseleave = function () {
 //     alert("Welcome to Fun Bus, Minion!");
 // }
 
-//4
+//4 - doubleclick event for first mouse image to change image
+const firstBodyImage = document.getElementsByTagName("img")[1];
+firstBodyImage.ondbclick = function () {
+        firstBodyImage.removeAttribute('src');
+        firstBodyImage.setAttribute('src', 'https://thumbs.gfycat.com/HatefulInbornKoodoo-small.gif')
+}
+
