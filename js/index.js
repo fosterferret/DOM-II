@@ -44,6 +44,7 @@ window.addEventListener('resize', () => {
 document.querySelectorAll('a')
   .forEach(el => el.addEventListener('focus', () => {
       el.style.color ="green";
+      el.backgroundColor = "red"
   }));
 
 //8 - click event listener for nav and preventDefault method to stop navigation from reloading page
@@ -64,6 +65,14 @@ window.onkeydown = function () {
     alert ("HAHAHAHA THIS IS NOT A USER FRIENDLY SITE");
 }
 
+//Nest two similar events somewhere in the site and prevent the event propagation properly
+let sectionOne = document.querySelector('section')
+sectionOne.onclick = function () {
+   this.style.backgroundColor = "rgb(44,55,55)";
+}
+firstBodyImage.onclick = function (event) {
+        event.stopPropagation()
+}
 
 
 
