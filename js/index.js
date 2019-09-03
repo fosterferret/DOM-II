@@ -46,37 +46,53 @@ document.querySelectorAll('a')
       el.style.color ="green";
   }));
 
-//8 - 
-  
-
-
-
-
-window.onload = function() {
-    let context = new AudioContext();
+//8 - click event listener for nav and preventDefault method to stop navigation from reloading page
+  const nav = document.querySelector('nav');
+  nav.onclick = function () {
+      nav.style.backgroundColor ="yellow";
+      nav.preventDefault();
   }
 
+//9 - mouseover event listener
+  const firstHeading = document.querySelector('h1')
+  firstHeading.onmouseover = function () {
+      firstHeading.textContent = "TAKE THAT MOUSE AWAY FROM ME!";
+  }
 
-// let iframe = document.createElement('iframe')
-// iframe.setAttribute("src", "sound/silence.mp3");
-// iframe.setAttribute("allow", "autoplay");
-// iframe.setAttribute("id", "audio");
-// iframe.setAttribute("style", "display:none");
-// document.body.appendChild(iframe);
-
-
-let audio = document.createElement('audio');
-audio.setAttribute("autoplay","");
-audio.setAttribute("id", "scream");
-document.body.appendChild(audio);
-
-let source = document.createElement('source');
-source.setAttribute("src", "sound/scream.mp3")
-source.setAttribute("type", "audio/mp3")
-audio.appendChild(source);
-
-document.addEventListener('click', musicPlay);
-function musicPlay() {
-    document.getElementById('scream').play();
-    document.removeEventListener('click', musicPlay);
+//10 - keydown
+window.onkeydown = function () {
+    alert ("HAHAHAHA THIS IS NOT A USER FRIENDLY SITE");
 }
+
+
+
+
+//will insert audio into site HTML after tomorrow
+// window.onload = function() {
+//     let context = new AudioContext();
+//   }
+
+
+// // let iframe = document.createElement('iframe')
+// // iframe.setAttribute("src", "sound/silence.mp3");
+// // iframe.setAttribute("allow", "autoplay");
+// // iframe.setAttribute("id", "audio");
+// // iframe.setAttribute("style", "display:none");
+// // document.body.appendChild(iframe);
+
+
+// let audio = document.createElement('audio');
+// audio.setAttribute("autoplay","");
+// audio.setAttribute("id", "scream");
+// document.body.appendChild(audio);
+
+// let source = document.createElement('source');
+// source.setAttribute("src", "sound/scream.mp3")
+// source.setAttribute("type", "audio/mp3")
+// audio.appendChild(source);
+
+// document.addEventListener('click', musicPlay);
+// function musicPlay() {
+//     document.getElementById('scream').play();
+//     document.removeEventListener('click', musicPlay);
+//}
