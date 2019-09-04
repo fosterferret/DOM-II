@@ -1,3 +1,5 @@
+//GAME IS BUGGY FOR NOW - WILL FIX AT THE END OF THE DAY!!!!!!!!
+
 let blocksContainer = document.querySelector('.blocks')
 blocksContainer.onclick = function (event) {
     let target = event.target
